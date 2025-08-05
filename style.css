@@ -3,7 +3,7 @@ body {
   padding: 0;
   background-color: #000;
   color: white;
-  font-family: Horizon, Arial, sans-serif;
+  font-family: "Archivo", sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -71,7 +71,6 @@ h1 {
   display: block;
   margin: 15px 0;
   font-size: 18px;
-  font-family: Horizon, Arial, sans-serif;
 }
 
 select {
@@ -91,7 +90,7 @@ button {
   border-radius: 50px;
   color: black;
   transition: background 0.3s;
-  font-family: Horizon, Arial, sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 button:hover {
