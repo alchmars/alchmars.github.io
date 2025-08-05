@@ -11,12 +11,11 @@
 </head>
 <body>
   <!-- Tela de configuração -->
-  <div id="tela-config" class="tela">
+  <div id="tela-config" class="tela visivel">
     <h1>Configurar Tempo</h1>
     <div class="inputs">
       <label>Horas:
         <select id="horas">
-          <!-- opções de 0 a 12 -->
           <script>
             for (let i = 0; i <= 12; i++) {
               document.write(`<option value="${i}">${String(i).padStart(2, '0')}</option>`);
@@ -27,7 +26,6 @@
 
       <label>Minutos:
         <select id="minutos">
-          <!-- opções de 0 a 59 -->
           <script>
             for (let i = 0; i <= 59; i++) {
               document.write(`<option value="${i}">${String(i).padStart(2, '0')}</option>`);
@@ -38,7 +36,6 @@
 
       <label>Avisar quando faltar (min):
         <select id="aviso">
-          <!-- opções de 0 a 59 -->
           <script>
             for (let i = 0; i <= 59; i++) {
               document.write(`<option value="${i}">${String(i).padStart(2, '0')}</option>`);
@@ -52,7 +49,7 @@
   </div>
 
   <!-- Tela do contador -->
-  <div id="tela-contador" class="tela" style="display: none;">
+  <div id="tela-contador" class="tela">
     <div id="timer">00:00:00</div>
     <button id="botao-recomecar" onclick="voltarParaConfiguracao()">Recomeçar</button>
   </div>
