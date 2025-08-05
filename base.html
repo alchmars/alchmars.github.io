@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador Pib-Guarujá</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/HW333ZLb/pibig.png">
+</head>
+<body>
+  <!-- Tela de configuração -->
+  <div id="tela-config" class="tela">
+    <h1>Configurar Tempo</h1>
+    <div class="inputs">
+      <label>Horas:
+        <select id="horas">
+          <!-- opções de 0 a 12 -->
+          <script>
+            for (let i = 0; i <= 12; i++) {
+              document.write(`<option value="${i}">${String(i).padStart(2, '0')}</option>`);
+            }
+          </script>
+        </select>
+      </label>
+
+      <label>Minutos:
+        <select id="minutos">
+          <!-- opções de 0 a 59 -->
+          <script>
+            for (let i = 0; i <= 59; i++) {
+              document.write(`<option value="${i}">${String(i).padStart(2, '0')}</option>`);
+            }
+          </script>
+        </select>
+      </label>
+
+      <label>Avisar quando faltar (min):
+        <select id="aviso">
+          <!-- opções de 0 a 59 -->
+          <script>
+            for (let i = 0; i <= 59; i++) {
+              document.write(`<option value="${i}">${String(i).padStart(2, '0')}</option>`);
+            }
+          </script>
+        </select>
+      </label>
+
+      <button onclick="iniciarContador()">Iniciar</button>
+    </div>
+  </div>
+
+  <!-- Tela do contador -->
+  <div id="tela-contador" class="tela" style="display: none;">
+    <div id="timer">00:00:00</div>
+    <button id="botao-recomecar" onclick="voltarParaConfiguracao()">Recomeçar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
