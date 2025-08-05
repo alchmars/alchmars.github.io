@@ -18,6 +18,8 @@ function iniciarContador() {
     return;
   }
 
+  document.activeElement.blur(); // Remove o foco do botão no mobile
+
   piscando = false;
 
   document.getElementById("tela-config").style.display = "none";
