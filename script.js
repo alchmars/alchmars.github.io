@@ -18,12 +18,11 @@ function iniciarContador() {
     return;
   }
 
-  document.activeElement.blur(); // Remove o foco do botão no mobile
+  document.activeElement.blur(); // remove foco no botão no mobile
 
   piscando = false;
 
-  document.getElementById("tela-config").style.display = "none";
-  document.getElementById("tela-contador").style.display = "flex";
+  alternarTelas("tela-config", "tela-contador");
 
   const timer = document.getElementById("timer");
   timer.style.color = "white";
@@ -72,6 +71,15 @@ function iniciarPiscar() {
 function voltarParaConfiguracao() {
   clearInterval(intervalo);
   piscando = false;
-  document.getElementById("tela-contador").style.display = "none";
-  document.getElementById("tela-config").style.display = "block";
+  alternarTelas("tela-contador", "tela-config");
+}
+
+function alternarTelas(idSaindo, idEntrando) {
+  const telaSaindo = document.getElementById(idSaindo);
+  const telaEntrando = document.getElementById(idEntrando);
+
+  telaSaindo.classList.remove("visivel");
+  setTimeout(() => {
+    telaEntrando.classList.add("visivel");
+  }, 100);
 }
