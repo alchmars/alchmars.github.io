@@ -96,3 +96,52 @@ button {
 button:hover {
   background-color: #ddd;
 }
+
+/* --------- RESPONSIVO --------- */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .tela {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .inputs label {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  select {
+    width: 100%;
+    font-size: 16px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #timer {
+    font-size: 80px;
+  }
+
+  #botao-recomecar {
+    position: static;
+    margin-top: 30px;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #timer {
+    font-size: 60px;
+  }
+}
